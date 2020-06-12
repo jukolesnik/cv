@@ -1,0 +1,698 @@
+body {
+	font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
+	background-image: url('images/blue-background.jpg');
+	background-size: cover;
+}
+
+.info-message {
+	position: fixed;
+	top: 20px;
+	left: 0;
+	height: 75px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-family: arial;
+	font-size: 30px;
+	background-image: url('images/overlay.png');
+	background-repeat: repeat;
+	
+	-webkit-animation: hideInfo 2s;
+	-moz-animation: hideInfo 2s;
+	-o-animation: hideInfo 2s;
+	animation: hideInfo 2s;
+
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	-o-animation-delay: 3s;
+	animation-delay: 3s;
+	
+	-webkit-animation-iteration-count: 1;
+	-moz-animation-iteration-count: 1;
+	-o-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.pdf-button-container {
+	height: 20px;
+	width: 20px;
+	position: fixed;
+	top: 20px;
+	left: -105px;
+	width: 150px;
+	height: 75px;
+	background-image: url('images/overlay.png');
+	background-repeat: repeat;
+	border-radius: 0 5px 5px 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+@keyframes hideInfo {
+	0% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 0;
+	}
+	100% {
+		display: none;
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes hideInfo {
+	0% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 0;
+	}
+	100% {
+		display: none;
+		opacity: 0;
+	}
+}
+
+.pdf-button-container img {
+	height: 100%;
+}
+
+.pdf-button-container a {
+	height: 50%;
+}
+
+.pdf-button-container label {
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.hidden-part > *,
+.shown-part label > * {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.info-message:before,
+.hidden-part:before,
+.shown-part label:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.hidden-part,
+.shown-part {
+	float: left;
+	height: inherit;
+	text-align: center;
+}
+
+.hidden-part {
+	width: 70%;
+}
+
+.shown-part {
+	width: 30%;
+}
+
+.pdf-button-container:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.toggle-pdf-icon {
+	display: inline-block;
+	border-right: 0;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid white;
+	width: 0;
+	height: 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+#pdf-btn-check {
+	display: none;
+}
+
+#pdf-btn-check:checked ~ .pdf-button-container {
+	left: 0;
+}
+
+#pdf-btn-check:checked ~ .pdf-button-container .toggle-pdf-icon {
+	border-right: 15px solid white;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 0;
+}
+
+
+#main {
+	box-shadow: 0 0 24px black;
+	width: 90%;
+	margin: auto;
+}
+
+.divider {
+	display: none;
+}
+
+.content {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: azure;
+}
+
+.bottom {
+	padding-bottom: 50px;
+}
+
+
+.flex-container {
+	background: transparent;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: stretch;
+}
+
+.header-container.flex-item.left {
+	margin-top: 40px;
+}
+
+.flex-container.vertical {
+	flex-flow: column;
+	margin-top: 0;
+	align-content: stretch;
+}
+
+.flex-item {
+	margin: auto;
+}
+
+#contacts {
+	margin: 0;
+}
+
+#contacts h2:first-child {
+	margin-top: 0;
+}
+
+.flex-item.left {
+	flex-basis: 65%;
+}
+
+.section {
+	margin-bottom: 20px;
+}
+
+.flex-item.right{
+	background-color: #00001f;
+	color: azure;
+	min-width: 320px;
+	margin: 0;
+}
+
+.cv-title,
+.title {
+	text-align: left;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.subtitle {
+	text-indent: 20px;
+	text-transform: uppercase;
+}
+
+h1.cv-title,
+h1.title {
+	font-size: 45px;
+	font-weight: bold;
+}
+
+h4.company-name {
+	font-style: italic;
+	font-weight: normal;
+}
+
+h4.job-title {
+	font-style: italic;
+	font-weight: bold;
+}
+
+.job-description > ul {
+	list-style-type: none;
+	margin-top: 10px;
+	padding-left: 0;
+}
+
+.job-description > ul li {
+	margin-bottom: 5px;
+	display: flex;
+	text-align: justify;
+}
+
+.margin-off {
+	margin: 0;
+} 
+
+.job-description > ul li:before {
+	content: "\2014";
+	font-size: 14px;
+	margin-right: 15px;
+}
+
+#contacts-list,
+#skills-list {
+	list-style: none;
+}
+
+#contacts-list li,
+#skills-list li {
+	display: flex;
+	margin: 0 0 15px 0;
+}
+
+.table-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.table-list-date {
+	font-weight: bold;
+	font-size: 18px;
+	width: 25%;
+}
+
+.table-list-description {
+	width: 70%;
+	font-size: 1.1em;
+}
+
+.table-list-description > h3 {
+	margin: 0;
+}
+
+.table-list-description h3,
+.table-list-description h4 {
+	margin: 0;
+}
+
+.table-list-description h4 {
+	font-weight: normal;
+}
+
+.flex-list-item {
+	display: flex;
+	margin-bottom: 15px;
+}
+
+.job_title {
+	font-size: 20px;
+}
+
+#skills-list li {
+	flex-direction: column;
+}
+
+#contacts-list li * {
+	margin-left: 20px;
+}
+
+#contacts-list li:before {
+	display: block;
+	width: 65px;
+	font-weight: bold;
+}
+
+#contacts-list a {
+	text-decoration: none;
+	color: white;
+}
+
+#address:before {
+	content: "Location: ";
+}
+
+#email:before {
+	content: "Email: ";
+}
+
+#phone:before {
+	content: "Phone: ";
+}
+
+#github:before {
+	content: "GitHub: ";
+}
+
+.set {
+	text-indent: 40px;
+}
+
+#header-photo {
+	margin-top: 35px;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background-image: url('images/profile-photo-new.jpg');
+	background-size: 250px 250px;
+}
+
+.header-container > p {
+	font-size: 18px;
+	text-align: justify;
+}
+
+progress {
+    background-color: #f3f3f3;
+    border: 0;
+    height: 0.5em;
+    width: 85%;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e0eaf0;
+}
+
+progress::-webkit-progress-value {
+    background-color: #329ad1;
+}
+
+progress::-moz-progress-bar {
+    background-color: #329ad1;
+}
+
+@media print {
+
+	body {
+		height: 594mm;
+		width: 210mm;
+		margin: 0;
+		padding: 0;
+		background-image: none;
+	}
+
+	h1.cv-title, h1.title {
+		font-size: 32px;
+		font-weight: bold;
+	}
+
+	h2.cv-title, h2.title {
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.subtitle {
+		font-size: 18px;
+		color: black;
+	}
+
+	.no-print {
+		display: none !important;
+	}
+
+	#contacts-list a {
+    	text-decoration: none;
+    	color: black;
+	}
+
+	#main {
+		box-shadow: 0 0 24px black;
+		height: 594mm;
+		margin: auto;
+		width: 100%;
+		display: flex;
+		flex-flow: column;
+	}
+
+	.divider {
+		display: inline;
+	}
+
+	.content {
+		background-color: white;
+	}
+
+	.content.cv-content {
+		flex: 1;
+		display: flex;
+	}
+
+	.header-container > p {
+		font-size: 14px;
+		margin-right: 20px;
+	}
+
+	.flex-item.left {
+		flex-basis: 63%;
+		margin-left: 40px;
+	}
+
+	.section-education {
+		margin-top: 100px;
+	}
+
+	.flex-item.right{
+		background-color: whitesmoke;
+		color: black;
+		min-width: 31%;
+		margin: 0;
+		border-left: 1px dashed black;
+	}
+
+	#header-photo {
+		margin-top: 70px;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		background-image: url('images/profile-photo-new.jpg');
+		background-size: 200px 200px;
+	}
+
+	#contacts-list, 
+	#skills-list {
+		font-size: 13px;
+		padding-left: 24px;
+		margin-bottom: 50px;
+	}
+
+	#contacts-list li span,
+	#contacts-list li a {
+		margin-left: 5px;
+	}
+
+	#skills-list li {
+		margin-bottom: 10px;
+	}
+
+	.table-list-date {
+		font-size: 14px;
+		width: 30%;
+	}
+
+	.table-list-description {
+		font-size: 14px;
+		width: 65%;
+	}
+
+	.header-container.flex-item.left {
+		margin-top: 60px;
+	}
+
+	progress {
+	    background-color: #f3f3f3;
+	    border: 1px solid black;
+	    height: 0.7em;
+	    width: 85%;
+	}	
+
+	progress::-webkit-progress-bar {
+	    background-color: #e0eaf0;
+	}	
+
+	progress::-webkit-progress-value {
+	    background-color: #777;
+	}	
+
+	progress::-moz-progress-bar {
+	    background-color: #329ad1;
+	}
+
+}
+
+@media only screen 
+	and (min-device-width: 300px) 
+	and (max-device-width: 1200px),
+	screen
+	and (min-width: 300px) 
+	and (max-width: 1200px) {
+
+		body {
+			font-size: 16px;
+		}
+
+		h1.cv-title {
+			text-align: center;
+			font-size: 1.5em;
+		}
+
+		h2.cv-title {
+			text-align: center;
+		 	font-size: 1.2em;
+		}
+
+		.header-container > p {
+			padding: 0 70px;
+			font-size: 1em;
+		}
+
+		h2.subtitle {
+			text-indent: 0;
+		}
+
+		h2.title,
+		h2.subtitle {
+			margin-top: 50px;
+			font-size: 1.2em;
+			text-align: center;
+		}
+
+		.flex-list-item {
+			flex-direction: column;
+			padding: 0 70px;
+		}
+
+		.table-list-date {
+			align-self: center;
+			width: 100%;
+			font-size: 1em;
+			margin: 10px auto 10px auto;
+		}
+
+		.table-list-date span {
+			display: block;
+			text-align: center;
+			background-color: #00001f;
+			color: azure;
+		}
+
+		.table-list-description {
+			width: 100%;
+			align-self: center;
+			font-size: 1.2em;
+		}
+
+		.table-list-description h3,
+		.table-list-description h4 {
+			text-align: center;
+			background-color:beige;
+		}
+
+
+		.job-description > ul li:before {
+			margin-top: 15px;
+		}
+
+		.job-description > ul li {
+			margin-bottom: 60px;
+		}
+
+		#header-photo {
+			margin: 30px auto;
+			width: 250px;
+			height: 250px;
+			background-size: 250px 250px;
+		}
+
+		#skills-list {
+			width: 80%;
+			padding: 0;
+			margin: auto;
+			font-size: 1.5em;
+		}
+
+		progress {
+			width: 100%;
+			height: 20px;
+		}
+
+		#contacts-list {
+			padding: 0;
+			text-align: center;
+		}
+
+		#contacts-list li:before {
+			display: block;
+			font-size: 1.2em;
+			width: 100%;
+		}
+
+		#contacts-list li {
+			display: list-item;
+			margin-bottom: 40px;
+		}
+
+		#contacts-list li span {
+			align-self: center;
+			margin:auto;
+			font-size: 1.2em;
+			width: 90%;
+		}
+
+		.flex-container {
+			display: -webkit-box;
+			display: box;
+    		-webkit-box-orient: vertical;
+    		box-orient: vertical;
+    		-webkit-box-direction: reverse;
+    		box-direction: reverse;
+		}
+
+		.flex-container.reversed {
+			box-direction: normal;
+			-webkit-box-direction: normal;
+		}
+
+		.flex-item.left {
+			flex-basis: 100%;
+		}
+
+		.flex-item.right{
+			background-color: #00001f;
+			color: azure;
+			min-width: 0;
+			width: 100%;
+			margin: 0;
+		}
+
+		.header-container > p,
+		.flex-list-item {
+			padding: 0 1em;
+		}
+
+		#header-description {
+			padding-top: 0;
+		}
+}
+
