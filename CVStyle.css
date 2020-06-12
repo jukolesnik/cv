@@ -1,6 +1,7 @@
 body {
 	font-family: 'Open Sans', 'Helvetica Light', 'Helvetica Neue', 'Arial Narrow', Helvetica, Arial, serif;
-	background-image: url('images/blue-background.jpg');
+	/* background-image: url('images/background-cv.jpg'); */
+	background-image: linear-gradient(to top right, #fff, #016865);
 	background-size: cover;
 }
 
